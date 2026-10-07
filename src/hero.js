@@ -78,10 +78,11 @@ if(renderer) {
   dust.rotation.z=t*.012;dustMaterial.uniforms.time.value=t;
   composer.render();host.classList.add('three-ready');canvas.dataset.rendered='true';canvas.dataset.sceneTime=t.toFixed(2);
  }
- function tick(now){frame=0;if(lost||paused||!inView||document.hidden)return;const delta=Math.min((now-last)/1000,.1);if(now-last>40){elapsed+=delta;last=now;renderFrame(elapsed);}frame=requestAnimationFrame(tick);}
- function sync(){if(frame)cancelAnimationFrame(frame);frame=0;toggle.textContent=paused?'Play animation':'Pause animation';toggle.setAttribute('aria-pressed',String(paused));if(!lost&&!paused&&inView&&!document.hidden){last=performance.now();frame=requestAnimationFrame(tick);}}
+ function tick(now){frame=0;if(!window.celebrationStarted||lost||paused||!inView||document.hidden)return;const delta=Math.min((now-last)/1000,.1);if(now-last>40){elapsed+=delta;last=now;renderFrame(elapsed);}frame=requestAnimationFrame(tick);}
+ function sync(){if(frame)cancelAnimationFrame(frame);frame=0;toggle.textContent=paused?'Play animation':'Pause animation';toggle.setAttribute('aria-pressed',String(paused));if(window.celebrationStarted&&!lost&&!paused&&inView&&!document.hidden){last=performance.now();frame=requestAnimationFrame(tick);}}
  function resize(){width=host.clientWidth;height=host.clientHeight;renderer.setSize(width,height,false);composer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();renderFrame(paused?6:elapsed);}
  new ResizeObserver(resize).observe(host);if('IntersectionObserver'in window)new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;sync();},{threshold:.05}).observe(host);
+ window.addEventListener('celebration:start',()=>{elapsed=0;renderFrame(motion.matches?6:0);sync();},{once:true});
  document.addEventListener('visibilitychange',sync);motion.addEventListener('change',()=>{paused=motion.matches;sync();if(paused)renderFrame(6);});
  toggle.addEventListener('click',()=>{paused=!paused;sync();});replay.addEventListener('click',()=>{elapsed=0;paused=motion.matches;renderFrame(paused?6:0);sync();});
  host.addEventListener('pointermove',event=>{if(event.pointerType!=='mouse'||paused)return;const b=host.getBoundingClientRect();pointer.set((event.clientX-b.left)/b.width*2-1,(event.clientY-b.top)/b.height*2-1);});host.addEventListener('pointerleave',()=>pointer.set(0,0));

@@ -20,7 +20,7 @@ Deploy `index.html` and `assets/` together; no build needed. GitHub pushes trigg
 - AY TECH courtesy and the user-supplied WhatsApp contact URL.
 - Distinct gradients, restrained page stars/light rays, capped regenerated particles, portrait image-first tributes, and optional opt-in audio.
 
-The low-resolution supplied school logo is used without artificial upscaling claims. Original upload remains outside the checkout. No backend, tracking, or personal-data collection. The user-supplied “A Thousand Years” audio is available at `assets/anniversary-song.mp3`. The welcome prompt offers Allow or Continue Without Music. Clicking Allow starts playback at 40% volume; looping is disabled and no playback controls are shown.
+The low-resolution supplied school logo is used without artificial upscaling claims. Original upload remains outside the checkout. No backend, tracking, or personal-data collection. The user-supplied “A Thousand Years” audio is available at `assets/anniversary-song.mp3`. The welcome prompt offers Allow Anniversary Song or Continue Without Music. Clicking Allow Anniversary Song starts playback at 40% volume; looping is disabled and no playback controls are shown.
 
 ## Rebuild the 3D hero
 
@@ -36,3 +36,5 @@ Three.js and esbuild are pinned in the lockfile. Keep the existing Vercel Framew
 Principal’s greeting: Mrs Omogele A. A.’s supplied flyer and verbatim speech appear directly after the hero. A short excerpt is visible; native details/summary expands the full message. Five newly supplied cultural-programme photos are included in both carousels, with complete group framing and neutral captions.
 
 Arrival effect: one golden firework launches from the viewport bottom to the upper hero and bursts once on page entry. It uses capped CSS particles, never intercepts input, cleans up after 3.6 seconds, and is skipped for reduced motion or hidden pages. It does not loop or replay on scrolling.
+
+The welcome choice gates entry: page content, CSS motion, slideshow timers, ambient particles, 3D reveal and the arrival firework start only after the prompt closes. Successful song permission starts music before opening the celebration; continuing without music starts it silently.
