@@ -1,6 +1,6 @@
 # TASFUEDIS — 30th Anniversary
 
-A mobile-first single-page HTML/CSS/JavaScript celebration for Tai Solarin Federal University of Education International School, using the school’s supplied logo, navy/gold flyer palette, and selected photographs.
+Responsive single-file HTML/CSS/JavaScript website using official school assets, navy/champagne-gold colours, seven photographs in each cinematic portrait carousel, and the supplied programme.
 
 ## Run
 
@@ -9,14 +9,15 @@ cd /workspace/TASFUEDIS
 python3 -m http.server 3000 --bind 0.0.0.0
 ```
 
-Deploy `index.html` and `assets/` together to any static host. No build or application dependencies. Optional Google Fonts have local fallbacks.
+Deploy `index.html` and `assets/` together; no build needed. GitHub pushes trigger the connected Vercel deployment.
 
-## Content
+## Features
 
-Official flyer details: Day 6 Grand Finale, 7 October 2026, 10am, School Hall. Commissioning of projects, award presentations and celebration. Theme: “Education and manners make a man.” Original uploaded archive is preserved outside the checkout. Selected photographs are resized only when necessary and converted to WebP; no retouching or artificial upscaling. Landscape groups are preserved in portrait tribute frames without cutting people off. The compact, supplied 200×132 school logo is used without claiming increased resolution.
+- WebGL ray-marched metallic orbital rings, an embossed CSS 3D anniversary medallion, soft light sweeps, and subtle interactive depth. CSS fallback remains visible if WebGL is unavailable. Rendering pauses offscreen and when the tab is hidden; reduced motion shows a static frame.
+- Both seven-photo carousels change every 500ms, using alternating glide, silk, and prism transitions. Portrait frames retain full group photographs with softly blurred background fills. Pause, navigation, focus/hover pause, reduced-motion controls, and slide counters are included.
+- School motto: “Education and manners make a man.” This is not labelled as the anniversary theme. The official flyer is shown unchanged.
+- Rounded, personalised PNG cards include the school logo, name, role, motto, and current website address. Native file sharing includes a message containing the site URL. WhatsApp/Facebook fallback opens the appropriate link-sharing page and downloads the card for attachment. Instagram/Snapchat use the phone’s file-share menu where supported; otherwise the card downloads and the website link is copied for manual upload. Apps control whether supplied share text is retained; the URL is printed on the card too. No claim of direct social posting or automatic file attachment.
+- AY TECH courtesy and the user-supplied WhatsApp contact URL.
+- Distinct gradients, restrained page stars/light rays, capped regenerated particles, portrait image-first tributes, and optional opt-in audio.
 
-Features: cinematic CSS light sweep and animated anniversary emblem, three-slide portrait carousel and five-slide past-events carousel (0.50-second intervals) with accessible pause/navigation controls, four image-first tributes, past-event slideshow, official flyer, personalised downloadable PNG keepsake with school crest, sharing, capped ambient particles, scroll reveals, reduced-motion support, finale and courtesy section. No backend or personal-data collection.
-
-## Remaining optional details
-
-Courtesy attribution, WhatsApp number and pre-filled message are not yet supplied. The courtesy CTA links to the keepsake section until then. Replace it with a properly URL-encoded WhatsApp anchor when provided. Optional licensed audio: set `celebrationAudioFile` to an actual provided asset path to enable the opt-in music modal; no autoplay or looping. A higher-resolution or vector school logo would improve large-screen sharpness.
+The low-resolution supplied school logo is used without artificial upscaling claims. Original upload remains outside the checkout. No backend, tracking, or personal-data collection. Optional licensed audio can be enabled by assigning the provided path to `celebrationAudioFile`.
