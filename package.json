@@ -7,7 +7,10 @@
     "build:hero": "esbuild src/hero.js --bundle --format=esm --minify --outfile=assets/hero-3d.js"
   },
   "devDependencies": {
-    "three": "0.180.0",
-    "esbuild": "0.25.10"
+    "esbuild": "0.25.10",
+    "three": "0.180.0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
