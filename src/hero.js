@@ -41,6 +41,7 @@ if(renderer) {
  function lettering(text,size,y,z,material=gold,depth=.012){const geometry=new TextGeometry(text,{font,size,depth,curveSegments:10,bevelEnabled:true,bevelThickness:size*.027,bevelSize:size*.024,bevelSegments:3});geometry.computeBoundingBox();const box=geometry.boundingBox;geometry.translate(-(box.max.x+box.min.x)/2,-(box.max.y+box.min.y)/2,0);const mesh=new THREE.Mesh(geometry,material);mesh.position.set(0,y,z);emblem.add(mesh);return mesh;}
  const digits=lettering('30',1.13,-.1,.115,gold,.15);
  lettering('T A S F U E D I S',.082,.66,.125,paleGold);
+ lettering('I.S.',.075,.79,.13,paleGold);
  lettering('A N N I V E R S A R Y',.084,-.79,.125,paleGold);
  lettering('THREE DECADES OF IMPACT',.046,-1.01,.123,paleGold);
  const ordinal=lettering('TH',.095,.29,.19,paleGold,.022);ordinal.position.x=.8;
