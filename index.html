@@ -117,7 +117,7 @@ async function buildCard(name, role) {
   ctx.textAlign='center';ctx.fillStyle='#ffe1a0';ctx.font='bold 38px Arial';ctx.fillText('T A S F U E D I S',540,145);
   const logo=new Image();logo.src='assets/school-logo.png';
   try{await logo.decode();ctx.fillStyle='#fffaf1';roundedPath(ctx,430,175,220,220,28);ctx.fill();ctx.drawImage(logo,449,184,182,202);}catch{}
-  
+
   ctx.fillStyle='#ffe0a0';ctx.font='260px Georgia';ctx.shadowColor='#020f39';ctx.shadowBlur=22;ctx.shadowOffsetY=10;ctx.fillText('30',540,615);ctx.shadowBlur=0;ctx.shadowOffsetY=0;ctx.font='bold 32px Arial';ctx.fillText('TH',715,425);
   ctx.font='bold 38px Arial';ctx.fillText('A N N I V E R S A R Y',540,680);ctx.strokeStyle='#e8bd57';ctx.beginPath();ctx.moveTo(450,740);ctx.lineTo(630,740);ctx.stroke();
   ctx.font='bold 30px Arial';ctx.fillStyle='#fff0ce';ctx.fillText('PROUD TO BE PART OF THE STORY',540,805);
