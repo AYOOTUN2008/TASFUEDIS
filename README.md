@@ -20,7 +20,7 @@ Deploy `index.html` and `assets/` together; no build needed. GitHub pushes trigg
 - AY TECH courtesy and the user-supplied WhatsApp contact URL.
 - Distinct gradients, restrained page stars/light rays, capped regenerated particles, portrait image-first tributes, and optional opt-in audio.
 
-The low-resolution supplied school logo is used without artificial upscaling claims. Original upload remains outside the checkout. No backend, tracking, or personal-data collection. Optional licensed audio can be enabled by assigning the provided path to `celebrationAudioFile`.
+The low-resolution supplied school logo is used without artificial upscaling claims. Original upload remains outside the checkout. No backend, tracking, or personal-data collection. The user-supplied “A Thousand Years” audio is available at `assets/anniversary-song.mp3`. The welcome prompt offers Allow or Continue Without Music. Clicking Allow starts playback at 40% volume; looping is disabled and no playback controls are shown.
 
 ## Rebuild the 3D hero
 
