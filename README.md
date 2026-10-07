@@ -34,3 +34,5 @@ npm run build:hero
 Three.js and esbuild are pinned in the lockfile. Keep the existing Vercel Framework Preset **Other** and no build command for static deployment. Three.js licence is in `assets/THREE-LICENSE.txt`. `assets/hero-preview.mp4` is a recorded mobile browser preview, not a replacement for the live 3D animation.
 
 Principal’s greeting: Mrs Omogele A. A.’s supplied flyer and verbatim speech appear directly after the hero. A short excerpt is visible; native details/summary expands the full message. Five newly supplied cultural-programme photos are included in both carousels, with complete group framing and neutral captions.
+
+Arrival effect: one golden firework launches from the viewport bottom to the upper hero and bursts once on page entry. It uses capped CSS particles, never intercepts input, cleans up after 3.6 seconds, and is skipped for reduced motion or hidden pages. It does not loop or replay on scrolling.
