@@ -41,13 +41,12 @@ if(renderer) {
  function lettering(text,size,y,z,material=gold,depth=.012){const geometry=new TextGeometry(text,{font,size,depth,curveSegments:10,bevelEnabled:true,bevelThickness:size*.027,bevelSize:size*.024,bevelSegments:3});geometry.computeBoundingBox();const box=geometry.boundingBox;geometry.translate(-(box.max.x+box.min.x)/2,-(box.max.y+box.min.y)/2,0);const mesh=new THREE.Mesh(geometry,material);mesh.position.set(0,y,z);emblem.add(mesh);return mesh;}
  const digits=lettering('30',1.13,-.1,.115,gold,.15);
  lettering('T A S F U E D I S',.082,.66,.125,paleGold);
- lettering('I.S.',.075,.79,.13,paleGold);
  lettering('A N N I V E R S A R Y',.084,-.79,.125,paleGold);
  lettering('THREE DECADES OF IMPACT',.046,-1.01,.123,paleGold);
  const ordinal=lettering('TH',.095,.29,.19,paleGold,.022);ordinal.position.x=.8;
  const crestBacking=new THREE.Mesh(new THREE.CircleGeometry(.19,48),new THREE.MeshStandardMaterial({color:'#fffbec',roughness:.55,metalness:.1}));crestBacking.position.set(0,.99,.124);emblem.add(crestBacking);
  const texture=new THREE.TextureLoader().load(new URL('./school-logo.png',import.meta.url).href,()=>renderFrame(elapsed));texture.colorSpace=THREE.SRGBColorSpace;
- const crest=new THREE.Mesh(new THREE.PlaneGeometry(.35,.23),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false}));crest.position.set(0,.99,.127);emblem.add(crest);
+ const crest=new THREE.Mesh(new THREE.PlaneGeometry(.26,.288),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false}));crest.position.set(0,.99,.127);emblem.add(crest);
  // Three-dimensional satellite rings and luminous orbital arcs.
  const satellite=new THREE.Group();scene.add(satellite);
  const silver=new THREE.MeshPhysicalMaterial({color:'#b3d5f4',metalness:.9,roughness:.22,transparent:true,opacity:.55});

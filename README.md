@@ -38,3 +38,5 @@ Principal’s greeting: Mrs Omogele A. A.’s supplied flyer and verbatim speech
 Arrival effect: one golden firework launches from the viewport bottom to the upper hero and bursts once on page entry. It uses capped CSS particles, never intercepts input, cleans up after 3.6 seconds, and is skipped for reduced motion or hidden pages. It does not loop or replay on scrolling.
 
 The welcome choice gates entry: page content, CSS motion, slideshow timers, ambient particles, 3D reveal and the arrival firework start only after the prompt closes. Successful song permission starts music before opening the celebration; continuing without music starts it silently.
+
+The updated, user-supplied portrait school crest (121×134) replaces the previous logo and favicon. Its International School initials are embedded in the artwork, so separate I.S. labels have been removed from the hero, 3D emblem and downloadable card. All renderings preserve the crest’s proportions.
