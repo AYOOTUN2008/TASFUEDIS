@@ -1,0 +1,13 @@
+{
+  "name": "tasfuedis-anniversary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:hero": "esbuild src/hero.js --bundle --format=esm --minify --outfile=assets/hero-3d.js"
+  },
+  "devDependencies": {
+    "three": "0.180.0",
+    "esbuild": "0.25.10"
+  }
+}
